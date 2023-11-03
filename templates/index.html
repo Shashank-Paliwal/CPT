@@ -1,0 +1,42 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Steganography</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script src="/static/script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Image Steganography</h1>
+
+        <!-- File Upload Section -->
+        <div id="upload-section">
+            <h2>Upload an Image</h2>
+            <input type="file" id="image-input" accept="image/*">
+            <textarea id="message-input" placeholder="Enter your secret message"></textarea>
+            <label for="password">Enter the password:</label>
+            <input type="password" name="password" id="password" placeholder="Enter password" required>
+            <button onclick="encodeImage()">Encode</button>
+        </div>
+
+        <!-- Encoded Image Display Section -->
+        <div id="encoded-section" style="display:none;">
+            <h2>Encoded Image</h2>
+            <img id="encoded-image" alt="Encoded Image">
+        </div>
+
+        <!-- Decode Section -->
+        <div id="decode-section">
+            <h2>Decode Image</h2>
+            <input type="file" id="decode-image-input" accept="image/*">
+            <button onclick="decodeImage()">Decode</button>
+            <p id="decoded-message"></p>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

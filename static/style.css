@@ -1,0 +1,76 @@
+/* static/style.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Prevent horizontal scrollbar */
+    background: repeating-linear-gradient(45deg, #333333, #333333 10px, #2d2d2d 10px, #2d2d2d 20px);
+    color: #fff;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+h1, h2 {
+    color: #fff;
+}
+
+/* File Upload Section */
+#upload-section {
+    margin-bottom: 20px;
+}
+
+input[type="file"] {
+    margin-bottom: 10px;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 25px; /* Rounded corners */
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Encoded Image Display Section */
+#encoded-section {
+    display: none;
+    margin-top: 20px;
+}
+
+#encoded-image {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Decode Section */
+#decode-section {
+    margin-top: 20px;
+}
+
+#decoded-message {
+    margin-top: 10px;
+}
